@@ -28,7 +28,7 @@ public class TestOmaFund {
   
   @Test
   public void testMyProjects() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -41,7 +41,7 @@ public class TestOmaFund {
   
   @Test
   public void testLogInFail() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -55,7 +55,7 @@ public class TestOmaFund {
 
   @Test
   public void testLogIn() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -67,7 +67,7 @@ public class TestOmaFund {
   
   @Test
   public void viewMap() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -80,7 +80,7 @@ public class TestOmaFund {
   
   @Test
   public void createProject() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -107,21 +107,20 @@ public class TestOmaFund {
   
   @Test
   public void testMyItems() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
     driver.findElement(By.name("userName")).sendKeys("bh");
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("1234");
-    driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
     driver.findElement(By.xpath("//input[@value='Submit']")).click();
     driver.findElement(By.xpath("//input[@value='Your Items']")).click();
   }
   
   @Test
   public void testSignOut() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -134,7 +133,7 @@ public class TestOmaFund {
   
   @Test
   public void testMapData() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
@@ -147,16 +146,14 @@ public class TestOmaFund {
   
   @Test
   public void testEditProject() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
-    driver.findElement(By.xpath("//input[@value='Log In']")).click();
-    driver.findElement(By.name("userName")).click();
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
     driver.findElement(By.name("userName")).sendKeys("bh");
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("1234");
-    driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
+    driver.findElement(By.xpath("//input[@value='Submit']")).click();
     driver.findElement(By.xpath("//input[@value='Create Project']")).click();
     driver.findElement(By.xpath("//input[@value='Back']")).click();
     driver.findElement(By.xpath("//input[@value='Your Projects']")).click();
@@ -165,20 +162,14 @@ public class TestOmaFund {
   
   @Test
   public void testEdit() throws Exception {
-    driver.get("http://ec2-3-135-240-102.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
-    driver.findElement(By.xpath("//input[@value='Log In']")).click();
-    driver.findElement(By.name("userName")).click();
-    driver.findElement(By.xpath("//input[@value='Log In']")).click();
-    driver.findElement(By.name("userName")).click();
-    driver.findElement(By.name("userName")).clear();
-    driver.findElement(By.name("userName")).sendKeys("bh");
+    driver.get("http://ec2-3-145-216-186.us-east-2.compute.amazonaws.com:8080/OmaFund/home.html?");
     driver.findElement(By.xpath("//input[@value='Log In']")).click();
     driver.findElement(By.name("userName")).click();
     driver.findElement(By.name("userName")).clear();
     driver.findElement(By.name("userName")).sendKeys("bh");
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("1234");
-    driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
+    driver.findElement(By.xpath("//input[@value='Submit']")).click();
     driver.findElement(By.xpath("//input[@value='Edit User']")).click();
     driver.findElement(By.name("password")).click();
     driver.findElement(By.name("password")).clear();
